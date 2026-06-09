@@ -5,7 +5,7 @@ export const useGetSlackUpdate = (id: string) => {
     return useQuery({
         queryKey: ['slack', id],
         queryFn: async () => {
-            const res = await api.get<string>(`/tasks/${id}/slack`)
+            const res = await api.get<string>(`/tasks/${id}/slack-report`)
             return res.data
         },
         enabled: false

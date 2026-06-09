@@ -5,7 +5,7 @@ export const useDeleteSubtask = () => {
     const queryClient = useQueryClient()
     return useMutation({
         mutationFn: async (id : string) => {
-            return api.delete(`subtask/${id}`);
+            return api.delete(`subtasks/${id}`);
         },
         onSuccess: () => {
             queryClient.invalidateQueries({queryKey:['tasks']});

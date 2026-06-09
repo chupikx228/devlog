@@ -6,7 +6,7 @@ export const useCreateSubtask = () => {
     const queryClient = useQueryClient();
     return useMutation({
         mutationFn: async (data : CreateSubtaskArgs) => {
-            return api.post('subtask', data)
+            return api.post('subtasks', data)
         },
         onSuccess: () => {
             queryClient.invalidateQueries({queryKey: ['tasks']})

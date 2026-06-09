@@ -6,7 +6,7 @@ export const useUpdateSubtask = () => {
     const queryClient = useQueryClient();
     return useMutation({
         mutationFn: async (data: EditSubtaskArgs) => {
-            return api.patch (`subtask/${data.id}`, data)
+            return api.patch (`subtasks/${data.id}`, data)
         },
         onSuccess: () => {
             queryClient.invalidateQueries({queryKey:['tasks']})

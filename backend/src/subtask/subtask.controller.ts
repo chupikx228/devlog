@@ -5,7 +5,7 @@ import {CreateSubtaskDto} from "./dto/create-subtask.dto";
 import {EditSubtaskDto} from "./dto/edit-subtask.dto";
 
 
-@Controller('subtask')
+@Controller('subtasks')
 export class SubtaskController {
     constructor(private subtaskService: SubtaskService) {}
 

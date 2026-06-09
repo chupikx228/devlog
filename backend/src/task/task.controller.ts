@@ -19,7 +19,7 @@ export class TaskController {
     getTask(@Param("id") id: string){
         return this.taskService.getTaskById(id)
     }
-    @Get(":id/slack")
+    @Get(":id/slack-report")
     getSlackUpdate(@Param("id") id: string){
         return this.taskService.generateSlackUpdate(id)
     }
