@@ -105,10 +105,10 @@ Backend follows a layered architecture: **Controller → Service → Repository 
 
 | Method | Endpoint | Description |
 |---|---|---|
-| `GET` | `/subtask/:id` | Get subtask by ID |
-| `POST` | `/subtask` | Create subtask |
-| `PATCH` | `/subtask/:id` | Edit subtask |
-| `DELETE` | `/subtask/:id` | Delete subtask |
+| `GET` | `/subtasks/:id` | Get subtask by ID |
+| `POST` | `/subtasks` | Create subtask |
+| `PATCH` | `/subtasks/:id` | Edit subtask |
+| `DELETE` | `/subtasks/:id` | Delete subtask |
 ## Database
 
 **SQLite via Prisma** was chosen for simplicity — no external server required, works out of the box with `npm install && npm run dev`. Trade-off: not suitable for concurrent multi-user production use, but fits the single-user local requirement perfectly.
